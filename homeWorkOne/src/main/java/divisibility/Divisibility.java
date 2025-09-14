@@ -1,4 +1,5 @@
 package divisibility;
+import java.util.Scanner;
 
 //This program reads in two numbers from the user, dividend and divisor, and prints out whether dividend is evenly divisible by divisor.
 //
@@ -20,6 +21,16 @@ package divisibility;
 public class Divisibility {
 
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the dividend: ");
+        int dividend = input.nextInt();
+        System.out.print("Enter the divisor: ");
+        int divisor = input.nextInt();
+        if(divisor == 0)
+            System.out.print(dividend + " is not divisible by " + divisor);
+        else if(dividend % divisor != 0)
+            System.out.print(dividend + " is not evenly divisible by " + divisor);
+        else
+            System.out.print(dividend + " is evenly divisible by " + divisor);
     }
 }
