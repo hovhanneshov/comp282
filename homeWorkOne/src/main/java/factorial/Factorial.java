@@ -1,4 +1,5 @@
 package factorial;
+import java.util.Scanner;
 /*
 Write a program that prints a factorial to the screen.
 
@@ -15,6 +16,16 @@ What number would you like to compute the factorial for? 4
 public class Factorial {
 
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
+        System.out.print("What number would you like to compute the factorial for? ");
+        int num = input.nextInt();
+        int factorial = 0;
+        for(int i = 0; i <= num; i++){
+            if(i != 0)
+                factorial = factorial * i;
+            else
+                factorial = 1;
+        }
+        System.out.print(factorial);
     }
 }
