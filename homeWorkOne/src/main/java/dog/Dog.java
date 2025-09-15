@@ -13,14 +13,16 @@ package dog;
 public class Dog {
     private String breed;
     // Add an instance variable here for name.
+    private String name;
 
-    public Dog(String theBreed)
+    public Dog(String theBreed, String theName)
     {
         breed = theBreed;
+        name = theName;
     }
 
     public String toString()
     {
-        return breed;
+        return name + " is a " + breed;
     }
 }
