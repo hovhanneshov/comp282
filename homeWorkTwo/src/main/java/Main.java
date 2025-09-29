@@ -24,6 +24,8 @@ public class Main {
         int originalValue = 50;
         attemptToChangePrimitive(originalValue);
         System.out.println(originalValue); // The original value stays the same as an int because despite having inserted originalValue into the parameters, the only thing being passed is the int value. Primitive types are always passed by value in Java, and cannot be edited as a parameter.
+        // DO THE EXERCISE 2 CHALLENGE HERE
+
 
     }
 
