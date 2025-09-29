@@ -8,7 +8,11 @@ public class Main {
     // Used for Exercise 5
     public static int sumCoordinates(Point... points) {
         // Implementation needed for Exercise 5
-        return 0;
+        int sum = 0;
+        for(int i = 0; i < points.length; i++) {
+            sum += points[i].x;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
@@ -28,6 +32,11 @@ public class Main {
 
         Point blank = new Point();
         System.out.println(blank.x + ", " + blank.y);
+
+        int sum1 = sumCoordinates(new Point(0,0), new Point(1,0), new Point(1,1));
+        System.out.println(sum1);
+        Point[] points = {new Point(0,0), new Point(1,0), new Point(1,1)};
+        int sum2 = sumCoordinates(points);
 
 
     }
