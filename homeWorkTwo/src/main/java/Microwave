@@ -1,2 +1,2 @@
-public class Microwave extends Device{
+public class Microwave extends Device {
 }
