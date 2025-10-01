@@ -39,6 +39,7 @@ public class Main {
         // Exercise 2 Challenge
         Point refPoint = new Point(1, 1);
         resetPoint(refPoint);
+        refPoint.printState();
 
         // Exercise 3
         Point blank = new Point();
