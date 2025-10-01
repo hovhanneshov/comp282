@@ -12,4 +12,9 @@ public class Microwave extends Device {
     super.printDescription();
     System.out.println("Max cooking time: " + maxTime);
   }
+
+  // Exeercise 8
+  public void heatFood() {
+    System.out.println("Food is heating.");
+  }
 }
