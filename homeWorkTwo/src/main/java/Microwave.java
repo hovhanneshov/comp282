@@ -5,4 +5,11 @@ public class Microwave extends Device {
     super(startPower);
     maxTime = maxCookingTime;
   }
+
+  // Exercise 6
+  @Override
+  public void printDescription() {
+    super.printDescription();
+    System.out.println("Max cooking time: " + maxTime);
+  }
 }
