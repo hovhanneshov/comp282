@@ -17,8 +17,8 @@ public class Main {
 
     // Exercise 2 Challenge
     public static resetPoint(Point p) {
-        p.move(0, 0);
-        p = new Point(0, 0);
+        p.move(0, 0); // This method adds 0 to both x and y values of refPoint and therefore don't modify it, BUT they would modify it given different values for movement; this does affect the outside object, it can only truly do so, however with a non-zero parameter
+        p = new Point(0, 0); // Reassigning the value to a Point with (0, 0) parameters also wouldn't change much about the refPoint if refPoint already has an x and y value of 0, but given the parameters I used, it does change and furthermore this affects the original object outside the method
     }
 
     public static void main(String[] args) {
