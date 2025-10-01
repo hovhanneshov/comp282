@@ -42,6 +42,11 @@ public class Main {
         Point[] points = {new Point(0,0), new Point(1,0), new Point(1,1)};
         int sum2 = sumCoordinates(points);
 
+        // Exercise 7
+        Device d1;
+        Microwave m1;
+        Device polyDevice;
+
 
     }
 
