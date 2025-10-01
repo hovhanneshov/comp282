@@ -47,7 +47,7 @@ public class Main {
         Microwave m1 = new Microwave(2, 1);
         Device polyDevice;
         polyDevice = m1;
-        polyDevice.printDescription(); // polyDevice is printed as a device due to the runtime polyDevice being treated as a Device object
+        polyDevice.printDescription(); // polyDevice is printed as a Microwave due to the runtime polyDevice being treated as a Microwave object
 
 
     }
