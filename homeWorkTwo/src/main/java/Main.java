@@ -47,7 +47,15 @@ public class Main {
         Microwave m1 = new Microwave(2, 1);
         Device polyDevice;
         polyDevice = m1;
-        polyDevice.printDescription(); // polyDevice is printed as a Microwave due to the runtime polyDevice being treated as a Microwave object, which overrides the Device class' printDescription method
+        polyDevice.printDescription(); // polyDevice is printed as a Microwave due to the runtime polyDevice being treated as a Microwave object, which overrides the Device class' printDescription method; only methods which are exclusive to Microwave can't be called
+
+        // Exercise 8
+        // polyDevice.printDescription(); causes a compile-time error
+        if(polyDevice instanceof Microwave){
+            Microwave downPolyDevice = (Microwave)polyDevice;
+            downPolyDevice.heatFood();
+        }
+        
 
 
     }
