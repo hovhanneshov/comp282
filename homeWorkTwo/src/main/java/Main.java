@@ -43,9 +43,11 @@ public class Main {
         int sum2 = sumCoordinates(points);
 
         // Exercise 7
-        Device d1;
-        Microwave m1;
+        Device d1 = new Device(1);
+        Microwave m1 = new Microwave(2, 1);
         Device polyDevice;
+        polyDevice = (Device)m1;
+        polyDevice.printDescription(); // polyDevice is printed as a device due to the runtime polyDevice being treated as a Device object
 
 
     }
