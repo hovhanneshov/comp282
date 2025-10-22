@@ -201,6 +201,12 @@ public class CSArrayList<E>
         }
         size == 0;
     }
+    public boolean isEmpty() {
+        if (size == 0)
+           return true;
+        else
+           return false;
+    }
 }
 
 
