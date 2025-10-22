@@ -62,6 +62,7 @@ public class CSArrayList<E>
      */
     @Override
     public boolean add(E anEntry) {
+        modCount++;
         // if the size is equal to capacity we must first allocate a new array to hold the data and then copy the data to this new array with method reallocate
         if (size == capacity) {
             reallocate();
@@ -77,6 +78,7 @@ public class CSArrayList<E>
      * @param anEntry The value to be added to the list.
      */
     public void add (int index, E anEntry) {
+        modCount++;
         if (index < 0 || index > size) {
             throw new ArrayIndexOutOfBoundsException(index);
         }
@@ -136,6 +138,7 @@ public class CSArrayList<E>
      */
     @Override
     public E remove(int index) {
+        modCount++;
         if (index < 0 || index >= size) {
             throw new ArrayIndexOutOfBoundsException(index);
         }
