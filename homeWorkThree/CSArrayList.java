@@ -238,7 +238,13 @@ public class CSArrayList<E>
            if (newCapacity < minCapacity)
                 newCapacity = minCapacity;
            theData = Arrays.copyOf(theData, newCapacity);
+           capacity = newCapacity;
         }
+    }
+    public void trimToSize() {
+        modCount++;
+        capacity = size;
+        theData = Arrays.copyOf(theData, capacity);
     }
                 
 }
