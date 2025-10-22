@@ -183,6 +183,18 @@ public class CSArrayList<E>
         }
         return -1;
     }
+    @Override
+    public String toString() {
+        String str = "[";
+        for (int i = 0; i < size; i++) {
+            if (i == size-1)
+                str += String.valueOf(theData[i]);
+            else
+                str += String.valueOf(theData[i]) + ", ";
+        }
+        str += "]";
+        return str;
+    }
 }
 
 
