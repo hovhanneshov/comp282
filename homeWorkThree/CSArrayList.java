@@ -211,7 +211,7 @@ public class CSArrayList<E>
            return false;
     }
     public boolean remove(Object o) {
-        if (Objects.isNull(o))
+        if (o == null)
            return false;
         int rmv = theData.indexOf(o);
         if (rmv == -1)
