@@ -196,9 +196,12 @@ public class CSArrayList<E>
         return str;
     }
     public void clear() {
+        /**
         for (int i = 0; i < size; i++) {
             theData[i] == null;
         }
+        */
+        theData = Arrays.copyOf(theData, 0);
         size == 0;
     }
     public boolean isEmpty() {
@@ -207,6 +210,12 @@ public class CSArrayList<E>
         else
            return false;
     }
+    public boolean remove(Object o) {
+        int rmove = theData.indexOf(o);
+        if (rmove == -1)
+           return false;
+        else
+           
 }
 
 
