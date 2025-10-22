@@ -196,6 +196,7 @@ public class CSArrayList<E>
         return str;
     }
     public void clear() {
+        modCount++;
         /**
         for (int i = 0; i < size; i++) {
             theData[i] == null;
@@ -211,6 +212,7 @@ public class CSArrayList<E>
            return false;
     }
     public boolean remove(Object o) {
+        modCount++;
         if (o == null)
            return false;
         int rmv = theData.indexOf(o);
@@ -227,6 +229,7 @@ public class CSArrayList<E>
         return true;
     }
     public void ensureCapacity(int minCapacity) {
+        modCount++;
         if(capacity >= minCapacity)
            break;
         else
