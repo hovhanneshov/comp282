@@ -226,6 +226,12 @@ public class CSArrayList<E>
         }
         return true;
     }
+    public void ensureCapacity(int minCapacity) {
+        if(capacity >= minCapacity)
+           break;
+        else
+           capacity = minCapacity;
+    }
                 
 }
 
