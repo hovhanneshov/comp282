@@ -195,6 +195,12 @@ public class CSArrayList<E>
         str += "]";
         return str;
     }
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            theData[i] == null;
+        }
+        size == 0;
+    }
 }
 
 
