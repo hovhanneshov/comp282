@@ -246,7 +246,14 @@ public class CSArrayList<E>
         capacity = size;
         theData = Arrays.copyOf(theData, capacity);
     }
-                
+    public void addAll(int index, Collection<? extends E> c) {
+        modCount++;
+        if (c == null)
+           break;
+        for (int i = index; i < c.size(); i++) {
+            this.add(i, c.get(i));
+        }
+    }
 }
 
 
