@@ -233,10 +233,12 @@ public class CSArrayList<E>
     }
     public void ensureCapacity(int minCapacity) {
         modCount++;
-        if(capacity >= minCapacity)
-           break;
-        else
-           capacity = minCapacity;
+        if (minCapacity > capacity) {
+           int newCapacity = (capacity * 3)/2 +1;
+           if (newCapacity < minCapacity)
+                newCapacity = minCapacity;
+           theData = Arrays.copyOf(theData, newCapacity);
+        }
     }
                 
 }
