@@ -211,11 +211,20 @@ public class CSArrayList<E>
            return false;
     }
     public boolean remove(Object o) {
-        int rmove = theData.indexOf(o);
-        if (rmove == -1)
+        int rmv = theData.indexOf(o);
+        if (rmv == -1)
            return false;
-        else
-           
+        else {
+           for (int i = rmv; i < size; i++) {
+                if (i == size-1)
+                   theData[i] = null;
+                else
+                   theData[i] = theData[i+1];
+           }
+        }
+        return true;
+    }
+                
 }
 
 
