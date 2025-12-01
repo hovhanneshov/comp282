@@ -23,6 +23,7 @@ public class ListStackDriver {
     // S1 – Browser Back Button
     private static void runS1_BrowserBackButton() {
         // TODO: Implement task S1 here.
+        ListStack<String> urls = new ListStack<String>();
     }
 
     // S2 – Undo in a Text Editor
