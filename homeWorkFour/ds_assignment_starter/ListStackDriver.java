@@ -48,7 +48,7 @@ public class ListStackDriver {
     // S3 – Checking Balanced Parentheses
     private static void runS3_BalancedParentheses() {
         // TODO: Implement task S3 here.
-        Character[] arr = {'(', ')', '(', '(,'};
+        Character[] arr = {'(', ')', '(', '('};
         ListStack<Character> balancedparentheses = new ListStack<>();
         for(int i = 0; i < arr.length(); i++) {
             if(arr[i] == '(')
@@ -78,6 +78,15 @@ public class ListStackDriver {
     // S5 – Directory Navigation (cd / cd ..)
     private static void runS5_DirectoryNavigation() {
         // TODO: Implement task S5 here.
+        String s;
+        String[] arr = {"cd root", "cd main", "cd ..", "cd home"};
+        ListStack<String> directorynavigation = new ListStack<>();
+        for(int i = 0; i < arr.length(); i++) {
+            if(!arr[i].equals("cd .."))
+                directorynavigation.push(arr[i]);
+            else
+                directorynavigation.pop();
+        }
     }
 
     // S6 – History of Calculator Operations
