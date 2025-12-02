@@ -48,11 +48,21 @@ public class ListStackDriver {
     // S3 – Checking Balanced Parentheses
     private static void runS3_BalancedParentheses() {
         // TODO: Implement task S3 here.
+        ListStack<Character> balancedparentheses = new ListStack<>();
+        
     }
 
     // S4 – Reversing a Word Using a Stack
     private static void runS4_ReverseWord() {
         // TODO: Implement task S4 here.
+        ListStack<Character> reverseword = new ListStack<>();
+        String s = "Word";
+        for(int i = 0; i < s.getLength(); i++) {
+            reverseword.push(s.charAt(i));
+        }
+        for(int i = 0; i < s.getLength(); i++) {
+            System.out.print(reverseword.pop());
+        }
     }
 
     // S5 – Directory Navigation (cd / cd ..)
