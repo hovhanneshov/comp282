@@ -24,11 +24,25 @@ public class ListStackDriver {
     private static void runS1_BrowserBackButton() {
         // TODO: Implement task S1 here.
         ListStack<String> urls = new ListStack<String>();
+        urls.push("www.youtube.com");
+        urls.push("www.google.com");
+        urls.push("www.yahoo.com");
+        urls.push("www.ebay.com");
+        urls.pop(); // Back button
+        urls.pop();
+        // Every pop and push function is O(1);
     }
 
     // S2 – Undo in a Text Editor
     private static void runS2_TextEditorUndo() {
         // TODO: Implement task S2 here.
+        String s = "";
+        ListStack<String> texteditorundo = new ListStack<String>();
+        texteditorundo.push(s);
+        s = "Line of text 2";
+        texteditorundo.push(s);
+        s = "Line of text 3";
+        s = texteditorundo.pop(); // Undo
     }
 
     // S3 – Checking Balanced Parentheses
