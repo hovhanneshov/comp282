@@ -92,6 +92,12 @@ public class ListStackDriver {
     // S6 – History of Calculator Operations
     private static void runS6_CalculatorHistory() {
         // TODO: Implement task S6 here.
+        ListStack<String> calculatorhistory = new ListStack<String>();
+        String[] arr = {"5+2=7", "3*2=6", "Ans+3=9"};
+        for(int i = 0; i < arr.length(); i++) {
+            calculatorhistory.push(arr[i]);
+        }
+        calculatorhistory.pop(); // Undoes last operation
     }
 
     // S7 – Palindrome Checker
