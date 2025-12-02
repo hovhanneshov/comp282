@@ -48,8 +48,18 @@ public class ListStackDriver {
     // S3 – Checking Balanced Parentheses
     private static void runS3_BalancedParentheses() {
         // TODO: Implement task S3 here.
+        Character[] arr = {'(', ')', '(', '(,'};
         ListStack<Character> balancedparentheses = new ListStack<>();
-        
+        for(int i = 0; i < arr.length(); i++) {
+            if(arr[i] == '(')
+               balancedparentheses.push('(');
+            else
+                balancedparentheses.pop();
+            if(balancedparentheses.size() == 0)
+                System.out.print("Balanced");
+            else
+                System.out.print("Not balanced");
+        }
     }
 
     // S4 – Reversing a Word Using a Stack
