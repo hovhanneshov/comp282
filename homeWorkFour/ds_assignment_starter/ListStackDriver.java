@@ -137,5 +137,16 @@ public class ListStackDriver {
     // S9 – Stack of Plates (Capacity-Limited Stack)
     private static void runS9_StackOfPlates() {
         // TODO: Implement task S9 here.
+        ListStack<String> stackofplates = new ListStack<>();
+        int maxHeight = 3;
+        String[] arr = {"plate 1", "plate 2", "plate 3", "plate 4"};
+        for(int i = 0; i < arr.length(); i++) {
+            if(i+1 == maxHeight)
+                System.out.println("The stack is full, please remove a plate before inserting another one.");
+            else
+                stackofplates.push(arr[i]);
+        }
+        stackofplates.pop();
+        stackofplates.push("plate 4");
     }
 }
