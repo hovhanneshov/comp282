@@ -139,9 +139,10 @@ public class CSLinkedListDriver {
         // TODO: Implement task LL8 here.
         // You may add a helper method addInOrder(E item, Comparator<E> cmp) to CSLinkedList if needed.
         CSLinkedList<String> eventschedulesorted = new CSLinkedList<>();
-        eventschedulesorted.add("09:00 Breakfast");
-        eventschedulesorted.addInOrder("15:35 Class starts"); // Military time
-        eventschedulesorted.addInOrder("12:00 Lunch break");
+        Comparator<E> timeComparator = (a, b) -> a.compareTo(b);
+        eventschedulesorted.add("09:00 Breakfast", timeComparator);
+        eventschedulesorted.addInOrder("15:35 Class starts", timeComparator); // Military time
+        eventschedulesorted.addInOrder("12:00 Lunch break", timeComparator);
     }
 
     // LL9 – Bug Tracker List (Remove by ID)
