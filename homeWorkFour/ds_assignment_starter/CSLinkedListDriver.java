@@ -11,10 +11,10 @@ public class CSLinkedListDriver {
         // TODO: Uncomment EXACTLY ONE of the following lines,
         // then implement that method below.
 
-        runLL1_Playlist();
-        runLL2_TodoList();
-        runLL3_CourseWaitlist();
-        runLL4_TextEditorLines();
+        //runLL1_Playlist();
+        //runLL2_TodoList();
+        //runLL3_CourseWaitlist();
+        //runLL4_TextEditorLines();
         //runLL5_RecentlyContacted();
         //runLL6_ShoppingListAddAfter();
         //runLL7_BusRouteStops();
@@ -50,10 +50,13 @@ public class CSLinkedListDriver {
         todo.add("Feed cat");
         todo.add("Take out the trash");
         todo.add("Go on a walk");
+        System.out.println(todo);
         todo.add(0, "Pay off credit card bill");
         todo.add(0,"Go to work");
+        System.out.println(todo);
         todo.remove(0);
         todo.remove(0);
+        System.out.println(todo);
         // Inserting at the front of an array is much more difficult due to their fixed sizes and having to shift all elements afterwards for O(n) whereas the time complexity for front-insertions are O(1) due to the header node
     }
 
@@ -103,10 +106,13 @@ public class CSLinkedListDriver {
         recentlycontacted.moveToFront("Leslie");
         recentlycontacted.moveToFront("Jack");
         recentlycontacted.moveToFront("Chris");
+        System.out.println(recentlycontacted);
         recentlycontacted.moveToFront("Jacob");
         recentlycontacted.moveToFront("Chris");
+        System.out.println(recentlycontacted);
         recentlycontacted.moveToFront("Jacob");
         recentlycontacted.moveToFront("Jack");
+        System.out.println(recentlycontacted);
         // An empty call of moveToFront will always result in O(n)
     }
 
@@ -117,8 +123,10 @@ public class CSLinkedListDriver {
         CSLinkedList<String> shoppinglistaddafter = new CSLinkedList<String>();
         shoppinglistaddafter.add("Milk");
         shoppinglistaddafter.addAfter("Milk", "Cereal");
+        System.out.println(shoppinglistaddafter);
         shoppinglistaddafter.add("Eggs");
         shoppinglistaddafter.addAfter("Milk", "Cookies");
+        System.out.println(shoppinglistaddafter);
     }
 
     // LL7 – Bus Route Stops
@@ -141,8 +149,11 @@ public class CSLinkedListDriver {
         CSLinkedList<String> eventschedulesorted = new CSLinkedList<>();
         Comparator<E> timeComparator = (a, b) -> a.compareTo(b);
         eventschedulesorted.add("09:00 Breakfast", timeComparator);
+        System.out.println(eventschedulesorted);
         eventschedulesorted.addInOrder("15:35 Class starts", timeComparator); // Military time
+        System.out.println(eventschedulesorted);
         eventschedulesorted.addInOrder("12:00 Lunch break", timeComparator);
+        System.out.println(eventschedulesorted);
     }
 
     // LL9 – Bug Tracker List (Remove by ID)
@@ -155,7 +166,9 @@ public class CSLinkedListDriver {
         bugtrackerremovebyid.add("Bug 3");
         bugtrackerremovebyid.add("Bug 4");
         bugtrackerremovebyid.add("Bug 1");
+        System.out.println(bugtrackerremovebyid);
         bugtrackerremovebyid.removeFirstOccurrence("Bug 1");
+        System.out.println(bugtrackerremovebyid);
     }
 
     // LL10 – Playlist Shuffle Copy
@@ -166,6 +179,7 @@ public class CSLinkedListDriver {
         playlistshufflecopy.add("Break on Through");
         playlistshufflecopy.add("Slip Inside This House");
         playlistshufflecopy.add("Politics As Usual");
+        System.out.println(playlistshufflecopy);
         CSLinkedList<String> a =  playlistshufflecopy.copy();
         a.clear();
         System.out.println(playlistshufflecopy);
