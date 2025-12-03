@@ -25,11 +25,17 @@ public class ListStackDriver {
         // TODO: Implement task S1 here.
         ListStack<String> urls = new ListStack<String>();
         urls.push("www.youtube.com");
+        urls.peek();
         urls.push("www.google.com");
+        urls.peek();
         urls.push("www.yahoo.com");
+        urls.peek();
         urls.push("www.ebay.com");
+        urls.peek();
         urls.pop(); // Back button
+        urls.peek();
         urls.pop();
+        urls.peek();
         // Every pop and push function is O(1);
     }
 
@@ -39,10 +45,13 @@ public class ListStackDriver {
         String s = "";
         ListStack<String> texteditorundo = new ListStack<String>();
         texteditorundo.push(s);
+        urls.peek();
         s = "Line of text 2";
         texteditorundo.push(s);
+        urls.peek();
         s = "Line of text 3";
         s = texteditorundo.pop(); // Undo
+        urls.peek();
     }
 
     // S3 – Checking Balanced Parentheses
@@ -143,10 +152,14 @@ public class ListStackDriver {
         for(int i = 0; i < arr.length(); i++) {
             if(i+1 == maxHeight)
                 System.out.println("The stack is full, please remove a plate before inserting another one.");
-            else
+            else {
                 stackofplates.push(arr[i]);
+                urls.peek();
+            }
         }
+        urls.peek();
         stackofplates.pop();
         stackofplates.push("plate 4");
+        urls.peek();
     }
 }
