@@ -104,6 +104,7 @@ public class ListStackDriver {
     private static void runS7_PalindromeChecker() {
         // TODO: Implement task S7 here.
         String s = "kayak";
+        ListStack<String> palindromechecker = new ListStack<>();
         int halfOfSize = s.getLength()/2;
         for(int i = 0; i < halfOfSize; i++) {
             palindromechecker.push(s.charAt(i));
@@ -123,6 +124,14 @@ public class ListStackDriver {
     // S8 – Function Call Stack Simulator
     private static void runS8_FunctionCallStack() {
         // TODO: Implement task S8 here.
+        ListStack<String> functioncallstack = new ListStack<>();
+        String[] arr = {"call first function", "call seond function", "return"};
+        for(int i = 0; i < arr.length(); i++) {
+            if(arr[i].substring(0, 3).equals("call"))
+                functioncallstack.push(arr[i]);
+            else if(arr[i].equals("return"))
+                functioncallstack.pop();
+        }
     }
 
     // S9 – Stack of Plates (Capacity-Limited Stack)
