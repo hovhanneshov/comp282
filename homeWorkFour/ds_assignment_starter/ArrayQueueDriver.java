@@ -114,23 +114,24 @@ public class ArrayQueueDriver {
     private static void runQ8_PrintSpoolingBurst() {
         // TODO: Implement task Q8 here.
         ArrayQueue<String> printspoolingburst = new ArrayQueue<>();
-        printqueue.add("hw.pdf");
-        printqueue.add("Bill Estimate.doc");
-        printqueue.add("Bill Estimate_1.doc");
-        printqueue.add("Bill Estimate_2.doc");
-        printqueue.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
-        printqueue.add("hundreddollarbills.png");
-        printqueue.remove(); // Printing
-        printqueue.remove();
-        printqueue.remove();
-        printqueue.remove();
-        printqueue.remove();
-        printqueue.remove();
+        printspoolingburst.add("hw.pdf");
+        printspoolingburst.add("Bill Estimate.doc");
+        printspoolingburst.add("Bill Estimate_1.doc");
+        printspoolingburst.add("Bill Estimate_2.doc");
+        printspoolingburst.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
+        printspoolingburst.add("hundreddollarbills.png");
+        printspoolingburst.remove(); // Printing
+        printspoolingburst.remove();
+        printspoolingburst.remove();
+        printspoolingburst.remove();
+        printspoolingburst.remove();
+        printspoolingburst.remove();
     }
 
     // Q9 – Round-Robin Service (Single Queue Version)
     private static void runQ9_RoundRobinService() {
         // TODO: Implement task Q9 here.
-        
+        ArrayQueue<String> roundrobinservice = new ArrayQueue<>();
+        int rounds = 10;
     }
 }
