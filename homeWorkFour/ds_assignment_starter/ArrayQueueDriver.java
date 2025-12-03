@@ -132,6 +132,24 @@ public class ArrayQueueDriver {
     private static void runQ9_RoundRobinService() {
         // TODO: Implement task Q9 here.
         ArrayQueue<String> roundrobinservice = new ArrayQueue<>();
-        int rounds = 10;
+        int rounds = 8;
+        String[] arr = {"Torrence", "Caroll", "Matt", "Paul"};
+        for(int i = 0; i < arr.length(); i++) { // Setting up queue
+            roundrobinservice.add(arr[i]);
+        }
+        for(int i = 1; i <= rounds; i++) { // roundrobinservice method
+            String person = roundrobinservice.remove();
+            System.out.println("Round " + i + ": Serving " + person);
+            if(i % 2 == 1) {
+                roundrobinservice.add(person);
+                System.out.println(person + " requeued for more service.");
+            }
+            else
+                System.out.println(person + " is finished.");
+            if(roundrobinservice.isEmpty()) {
+                System.out.println("All people finished. Stopping early.");
+                break;
+            }
+        }
     }
 }
