@@ -103,6 +103,21 @@ public class ListStackDriver {
     // S7 – Palindrome Checker
     private static void runS7_PalindromeChecker() {
         // TODO: Implement task S7 here.
+        String s = "kayak";
+        int halfOfSize = s.getLength()/2;
+        for(int i = 0; i < halfOfSize; i++) {
+            palindromechecker.push(s.charAt(i));
+        }
+        if(s.getLength() % 2 == 1)
+            halfOfSize++;
+        for(int i = 0; i < halfOfSize; i++) {
+            if(palindromechecker.peek() == s.charAt(i))
+                palindromechecker.pop();
+        }
+        if(palindromchecker.isEmpty())
+            System.out.println(s +" is a palindrome");
+        else
+            System.out.println(s +" is NOT a palindrome");
     }
 
     // S8 – Function Call Stack Simulator
