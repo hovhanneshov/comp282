@@ -110,7 +110,7 @@ public class ListStackDriver {
         }
         if(s.getLength() % 2 == 1)
             halfOfSize++;
-        for(int i = 0; i < halfOfSize; i++) {
+        for(int i = halfOfSize; i < s.getLength(); i++) {
             if(palindromechecker.peek() == s.charAt(i))
                 palindromechecker.pop();
         }
