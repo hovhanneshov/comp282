@@ -24,6 +24,9 @@ public class ArrayQueueDriver {
     private static void runQ1_PrintQueue() {
         // TODO: Implement task Q1 here.
         ArrayQueue<Syring> printqueue = new ArrayQueue<>();
+        printqueue.addFirst("hw.pdf");
+        printqueue.addFirst("Bill Estimate.doc");
+        
     }
 
     // Q2 – Call Center Queue
