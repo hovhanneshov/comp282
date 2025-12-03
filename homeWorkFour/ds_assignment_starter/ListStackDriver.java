@@ -136,10 +136,15 @@ public class ListStackDriver {
         ListStack<String> functioncallstack = new ListStack<>();
         String[] arr = {"call first function", "call seond function", "return"};
         for(int i = 0; i < arr.length(); i++) {
-            if(arr[i].substring(0, 3).equals("call"))
+            if(arr[i].substring(0, 4).equals("call")) {
                 functioncallstack.push(arr[i]);
-            else if(arr[i].equals("return"))
+                functioncallstack.peek();
+            }
+            else if(arr[i].equals("return")) {
                 functioncallstack.pop();
+                if(!functioncallstack.isEmpty())
+                    functioncallstack.peek();
+            }
         }
     }
 
