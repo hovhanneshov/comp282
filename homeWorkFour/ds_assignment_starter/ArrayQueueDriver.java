@@ -113,10 +113,19 @@ public class ArrayQueueDriver {
     // Q8 – Print Spooling with Burst of Jobs
     private static void runQ8_PrintSpoolingBurst() {
         // TODO: Implement task Q8 here.
+        ArrayQueue<String> printspoolingburst = new ArrayQueue<>();
+        printqueue.add("hw.pdf");
+        printqueue.add("Bill Estimate.doc");
+        printqueue.add("Bill Estimate_1.doc");
+        printqueue.add("Bill Estimate_2.doc");
+        printqueue.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
+        printqueue.add("hundreddollarbills.png");
+        printqueue.remove(); // Prints the first document queued
     }
 
     // Q9 – Round-Robin Service (Single Queue Version)
     private static void runQ9_RoundRobinService() {
         // TODO: Implement task Q9 here.
+        
     }
 }
