@@ -45,13 +45,13 @@ public class ListStackDriver {
         String s = "";
         ListStack<String> texteditorundo = new ListStack<String>();
         texteditorundo.push(s);
-        urls.peek();
+        texteditorundo.peek();
         s = "Line of text 2";
         texteditorundo.push(s);
-        urls.peek();
+        texteditorundo.peek();
         s = "Line of text 3";
         s = texteditorundo.pop(); // Undo
-        urls.peek();
+        texteditorundo.peek();
     }
 
     // S3 – Checking Balanced Parentheses
@@ -154,12 +154,12 @@ public class ListStackDriver {
                 System.out.println("The stack is full, please remove a plate before inserting another one.");
             else {
                 stackofplates.push(arr[i]);
-                urls.peek();
+                stackofplates.peek();
             }
         }
-        urls.peek();
+        stackofplates.peek();
         stackofplates.pop();
         stackofplates.push("plate 4");
-        urls.peek();
+        stackofplates.peek();
     }
 }
