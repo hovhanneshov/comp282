@@ -23,6 +23,7 @@ public class ArrayQueueDriver {
     // Q1 – Print Queue
     private static void runQ1_PrintQueue() {
         // TODO: Implement task Q1 here.
+        ArrayQueue<Syring> printqueue = new ArrayQueue<>();
     }
 
     // Q2 – Call Center Queue
