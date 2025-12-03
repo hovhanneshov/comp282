@@ -120,7 +120,12 @@ public class ArrayQueueDriver {
         printqueue.add("Bill Estimate_2.doc");
         printqueue.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
         printqueue.add("hundreddollarbills.png");
-        printqueue.remove(); // Prints the first document queued
+        printqueue.remove(); // Printing
+        printqueue.remove();
+        printqueue.remove();
+        printqueue.remove();
+        printqueue.remove();
+        printqueue.remove();
     }
 
     // Q9 – Round-Robin Service (Single Queue Version)
