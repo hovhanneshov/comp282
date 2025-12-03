@@ -25,8 +25,11 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q1 here.
         ArrayQueue<String> printqueue = new ArrayQueue<>();
         printqueue.add("hw.pdf");
+        printqueue.peek();
         printqueue.add("Bill Estimate.doc");
+        printqueue.peek();
         printqueue.remove(); // Prints the first document queued
+        printqueue.peek();
     }
 
     // Q2 – Call Center Queue
@@ -34,14 +37,20 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q2 here.
         ArrayQueue<String> callcenterqueue = new ArrayQueue<>();
         callcenterqueue.add("Torrence"); // Calling and put on hold
+        callcenterqueue.peek();
         callcenterqueue.add("Carol");
         System.out.println("New caller put off hold.");
         callcenterqueue.remove();
+        callcenterqueue.peek();
         callcenterqueue.add("Matt");
+        callcenterqueue.peek();
         System.out.println("New caller put off hold.");
         callcenterqueue.remove();
+        callcenterqueue.peek();
         System.out.println("New caller put off hold.");
         callcenterqueue.remove();
+        if(callcenterqueue.isEmpty())
+            System.out.println("Queue is now empty");
     }
 
     // Q3 – Theme Park Ride Line
@@ -49,12 +58,17 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q3 here.
         ArrayQueue<String> themeparkrideline = new ArrayQueue<>();
         themeparkrideline.add("Torrence");
+        themeparkrideline.peek();
         themeparkrideline.add("Carol");
+        themeparkrideline.peek();
         themeparkrideline.add("Matt");
+        themeparkrideline.peek();
         System.out.println("Ride is now ready to b boarded.");
         themeparkrideline.remove();
         themeparkrideline.remove();
         themeparkrideline.remove();
+        if(themeparkrideline.isEmpty())
+            System.out.println("Queue is now empty");
     }
 
     // Q4 – Customer Service Tickets
@@ -62,14 +76,20 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q4 here.
         ArrayQueue<Integer> customerservicetickets = new ArrayQueue<>();
         customerservicetickets.add(568); // Service ticket
+        customerservicetickets.peek();
         customerservicetickets.add(569);
+        customerservicetickets.peek();
         System.out.println("568!");
         customerservicetickets.remove();
+        customerservicetickets.peek();
         customerservicetickets.add(570);
+        customerservicetickets.peek();
         System.out.println("569!");
         customerservicetickets.remove();
+        customerservicetickets.peek();
         System.out.println("570!");
         customerservicetickets.remove();
+        customerservicetickets.peek();
     }
 
     // Q5 – Task Scheduling Queue
@@ -77,10 +97,13 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q5 here.
         ArrayQueue<String> taskschedulingqueue = new ArrayQueue<>();
         taskschedulingqueue.add("Execute function");
+        taskschedulingqueue.peek();
         taskschedulingqueue.remove(); // Execution
         taskschedulingqueue.add("Store file in memory");
+        taskschedulingqueue.peek();
         taskschedulingqueue.remove();
         taskschedulingqueue.add("Copy final contents in other address");
+        taskschedulingqueue.peek();
         taskschedulingqueue.remove();
     }
 
@@ -89,9 +112,13 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q6 here.
         ArrayQueue<String> checkoutline = new ArrayQueue<>();
         checkoutline.add("Torrence");
+        checkoutline.peek();
         checkoutline.add("Carol");
+        checkoutline.peek();
         System.out.println("Now serving " + checkoutline.remove());
+        checkoutline.peek();
         checkoutline.add("Matt");
+        checkoutline.peek();
         System.out.println("Now serving " + checkoutline.remove());
         System.out.println("Now serving " + checkoutline.remove());
     }
@@ -101,13 +128,20 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q7 here.
         ArrayQueue<String> messagequeuechatapp = new ArrayQueue<>();
         messagequeuechatapp.add("Hey");
+        messagequeuechatapp.peek();
         messagequeuechatapp.add("How was your day?");
+        messagequeuechatapp.peek();
         messagequeuechatapp.remove(); // Sending after a short while of the messages being entered
         messagequeuechatapp.remove();
+        System.out.println("Message was sent on 11:23");
         messagequeuechatapp.add("Ok");
+        messagequeuechatapp.peek();
         messagequeuechatapp.remove();
+        System.out.println("Message was sent on 11:21");
         messagequeuechatapp.add("Wow, ur dry");
+        messagequeuechatapp.peek();
         messagequeuechatapp.remove();
+        System.out.println("Message was sent on 11:24");
     }
 
     // Q8 – Print Spooling with Burst of Jobs
@@ -115,16 +149,27 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q8 here.
         ArrayQueue<String> printspoolingburst = new ArrayQueue<>();
         printspoolingburst.add("hw.pdf");
+        printspoolingburst.peek();
         printspoolingburst.add("Bill Estimate.doc");
+        printspoolingburst.peek();
         printspoolingburst.add("Bill Estimate_1.doc");
+        printspoolingburst.peek();
         printspoolingburst.add("Bill Estimate_2.doc");
+        printspoolingburst.peek();
         printspoolingburst.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
+        printspoolingburst.peek();
         printspoolingburst.add("hundreddollarbills.png");
+        printspoolingburst.peek();
         printspoolingburst.remove(); // Printing
+        printspoolingburst.peek();
         printspoolingburst.remove();
+        printspoolingburst.peek();
         printspoolingburst.remove();
+        printspoolingburst.peek();
         printspoolingburst.remove();
+        printspoolingburst.peek();
         printspoolingburst.remove();
+        printspoolingburst.peek();
         printspoolingburst.remove();
     }
 
