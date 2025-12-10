@@ -281,6 +281,24 @@ public class BST<E> implements Tree<E> {
         toSortedList(node.right, result);
     }
 
+    public boolean isBalanced() { // Task 10
+        return heightOrUnbalanced(root) != -1;
+    }
+
+    private int heightOrUnbalanced(TreeNode<E> node) { // Task 10
+        if (node == null)
+            return 0;
+        int leftHeight = heightOrUnbalanced(node.left);
+        if(leftHeight == -1)
+            return -1;
+        int rightHeight = heightOrUnbalanced(node.right);
+        if(rightHeight == -1)
+            return -1;
+        if(Math.abs(leftHeight - rightHeight) > 1)
+            return -1;
+        return 1 + Math.max(leftHeight, rightHeight);
+    }
+
     @Override /** Obtain an iterator. Use inorder. */
     public java.util.Iterator<E> iterator() {
         return new InorderIterator();
