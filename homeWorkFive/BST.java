@@ -248,11 +248,11 @@ public class BST<E> implements Tree<E> {
     }
 
     private E max(TreeNode<E> node) { // Task 8
-        if(root == null)
+        if(node == null)
             return null;
-        if(root.right == null)
-            return root.element;
-        return max(root.right);
+        if(node.right == null)
+            return node.element;
+        return max(node.right);
     }
 
     public E min() { // Task 8
@@ -260,11 +260,11 @@ public class BST<E> implements Tree<E> {
     }
 
     private E min(TreeNode<E> node) { // Task 8
-        if(root == null)
+        if(node == null)
             return null;
-        if(root.left == null)
-            return root.element;
-        return min(root.left);
+        if(node.left == null)
+            return node.element;
+        return min(node.left);
     }
 
     @Override /** Obtain an iterator. Use inorder. */
