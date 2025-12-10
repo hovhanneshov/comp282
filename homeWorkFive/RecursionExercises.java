@@ -46,18 +46,28 @@ public class RecursionExercises {
     // Task 4: recursive sum of an array (use the helper below)
     public static long sumArray(int[] data) {
         // TODO: implement Task 4
-        return 0L;
+        if(data == null)
+            throw new IllegalArgumentException("data must not be null");
+        if(data.length == 0)
+            return 0;
+        return sumArrayFromIndex(data, 0);
     }
 
     // Helper for Task 4
     private static long sumArrayFromIndex(int[] data, int index) {
         // TODO: implement Task 4 helper
-        return 0L;
+        if(index == data.length)
+            return 0;
+        return data[index] + sumArrayFromIndex(data, index+1);
     }
 
     // Task 5: recursive string reverse
     public static String reverse(String s) {
         // TODO: implement Task 5
-        return null;
+        if(s == null)
+            return null;
+        if(s.length() <= 1)
+            return s;
+        return s.substring(s.length()-1) + reverse(s);
     }
 }
