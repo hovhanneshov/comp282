@@ -49,7 +49,7 @@ public class TestBST {
 
         // Testing Task 9
         java.util.List<Integer> list = intTree.toSortedList();
-        System.out.println("\nPrinting all elements in list: ");
+        System.out.print("\nPrinting all elements in list, sorted in ascending order:  ");
         for (Integer i : list)
             System.out.print(i + " ");
 
