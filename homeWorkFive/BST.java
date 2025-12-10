@@ -267,6 +267,20 @@ public class BST<E> implements Tree<E> {
         return min(node.left);
     }
 
+    public java.util.List<E> toSortedList() { // Task 9
+        java.util.List<E> result = new java.util.ArrayList<>();
+        toSortedList(root, result);
+        return result;
+    }
+
+    private void toSortedList(TreeNode<E> node, java.util.List<E> result) { // Task 9
+        if(node == null)
+            return;
+        toSortedList(node.left, result);
+        result.add(node.element);
+        toSortedList(node.right, result);
+    }
+
     @Override /** Obtain an iterator. Use inorder. */
     public java.util.Iterator<E> iterator() {
         return new InorderIterator();
