@@ -34,5 +34,27 @@ public class TestBST {
         BST<Integer> intTree = new BST<>(numbers);
         System.out.print("\nInorder (sorted): ");
         intTree.inorder();
+
+        // Testing Task 6
+        System.out.print("\nHeight of tree: " + tree.height());
+        System.out.print("\nHeight of intTree: " + intTree.height());
+
+        // Testing Task 7
+        System.out.print("\nCount leaves of tree: " + tree.countLeaves());
+        System.out.print("\nCount leaves of intTree: " + intTree.countLeaves());
+
+        // Testing Task 8
+        System.out.print("\nMaximum value in intTree: " + intTree.max());
+        System.out.print("\nMinimum value in intTree: " + intTree.min());
+
+        // Testing Task 9
+        java.util.List<Integer> list = intTree.toSortedList();
+        System.out.println("\nPrinting all elements in list: ");
+        for (Integer i : list)
+            System.out.print(i + " ");
+
+        // Testing Task 10
+        System.out.print("\nChecking if tree is balanced: " + tree.isBalanced());
+        System.out.print("\nChecking if intTree is balanced: " + intTree.isBalanced());
     }
 }
