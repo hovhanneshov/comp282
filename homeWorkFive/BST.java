@@ -219,6 +219,18 @@ public class BST<E> implements Tree<E> {
         return true; // Element deleted successfully
     }
 
+    public int height() { // Task 6
+        return height(root);
+    }
+
+    private int height(TreeNode<E> node) { // Task 6
+        if (node == null)
+            return -1;
+        if(node.left == null && node.right == null)
+            return 0;
+        return 1 + height(node.left) + height(node.right);
+    }
+
     @Override /** Obtain an iterator. Use inorder. */
     public java.util.Iterator<E> iterator() {
         return new InorderIterator();
