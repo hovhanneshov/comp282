@@ -68,6 +68,6 @@ public class RecursionExercises {
             return null;
         if(s.length() <= 1)
             return s;
-        return s.substring(s.length()-1) + reverse(s);
+        return s.substring(s.length()-1) + reverse(s.substring(0, s.length()-1));
     }
 }
