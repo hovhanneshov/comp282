@@ -243,6 +243,30 @@ public class BST<E> implements Tree<E> {
         return 1 + countLeaves(node.left) + countLeaves(node.right);
     }
 
+    public E max() { // Task 8
+        return max(root);
+    }
+
+    private E max(TreeNode<E> node) { // Task 8
+        if(root == null)
+            return null;
+        if(root.right == null)
+            return root.element;
+        return max(root.right);
+    }
+
+    public E min() { // Task 8
+        return min(root);
+    }
+
+    private E min(TreeNode<E> node) { // Task 8
+        if(root == null)
+            return null;
+        if(root.left == null)
+            return root.element;
+        return min(root.left);
+    }
+
     @Override /** Obtain an iterator. Use inorder. */
     public java.util.Iterator<E> iterator() {
         return new InorderIterator();
