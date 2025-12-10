@@ -9,6 +9,12 @@ public class BSTExercises {
      */
     public static BST<Integer> fromArray(int[] values) {
         // TODO: implement Task 11 (optional)
-        return null;
+        if(values == null)
+            throw new IllegalArgumentException("values can't be null");
+        BST<Integer> bst = new BST<>();
+        for (int value : values) {
+            bst.add(value);
+        }
+        return bst;
     }
 }
