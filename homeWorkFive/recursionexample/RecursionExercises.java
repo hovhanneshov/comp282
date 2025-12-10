@@ -40,7 +40,7 @@ public class RecursionExercises {
             return 0;
         if(n == 1)
             return 1;
-        return fibonacciRecursive(n-1);
+        return fibonacciRecursive(n-1) + fibonacciRecursive(n-2);
     }
 
     // Task 4: recursive sum of an array (use the helper below)
