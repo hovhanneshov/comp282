@@ -56,5 +56,15 @@ public class TestBST {
         // Testing Task 10
         System.out.print("\nChecking if tree is balanced: " + tree.isBalanced());
         System.out.print("\nChecking if intTree is balanced: " + intTree.isBalanced());
+
+        // Testing Task 11
+        int[] numbers2 = {2, 4, 3, 1, 8, 5, 6, 7};
+        BST<Integer> tree2 = BSTExercises.fromArray(numbers2);
+        if(tree2.countLeaves() == numbers2.length)
+            System.out.print("\nThe size of BST tree2 is the same as the array numbers2");
+        java.util.List<Integer> numbers3 = tree2.toSortedList();
+        System.out.println("\nPrinting all elements in numbers3, sorted in ascending order: ");
+        for (Integer i : numbers3)
+            System.out.print(i + " ");
     }
 }
