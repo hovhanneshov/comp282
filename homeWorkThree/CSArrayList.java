@@ -213,19 +213,15 @@ public class CSArrayList<E>
         return size == 0;
     }
     public boolean remove(Object o) {
-        if (o == null)
-            return false;
         modCount++;
         int rmv = this.indexOf(o);
         if (rmv == -1)
             return false;
-        else {
-            for (int i = rmv; i < size; i++) {
-                if (i == size-1)
-                    theData[i] = null;
-                else
-                    theData[i] = theData[i+1];
-            }
+        for (int i = rmv; i < size; i++) {
+            if (i == size - 1)
+                theData[i] = null;
+            else
+                theData[i] = theData[i + 1];
         }
         return true;
     }
