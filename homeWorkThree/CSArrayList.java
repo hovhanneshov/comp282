@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 import java.util.AbstractList;
 import java.util.Collection;
@@ -186,6 +185,9 @@ public class CSArrayList<E>
         }
         return -1;
     }
+    /**
+     * Part A follows underneath
+     */
     @Override
     public String toString() {
         String str = "[";
@@ -200,62 +202,56 @@ public class CSArrayList<E>
     }
     public void clear() {
         modCount++;
-        /**
-        for (int i = 0; i < size; i++) {
-            theData[i] == null;
-        }
-        */
-        theData = Arrays.copyOf(theData, 0);
-        size == 0;
+         for (int i = 0; i < size; i++) { // Enables garbage collection
+             theData[i] = null;
+         }
+        size = 0;
+         this.trimToSize();
+         this.ensureCapacity(INITIAL_CAPACITY);
     }
     public boolean isEmpty() {
-        if (size == 0)
-           return true;
-        else
-           return false;
+        return size == 0;
     }
     public boolean remove(Object o) {
-        modCount++;
         if (o == null)
-           return false;
-        int rmv = theData.indexOf(o);
+            return false;
+        modCount++;
+        int rmv = this.indexOf(o);
         if (rmv == -1)
-           return false;
+            return false;
         else {
-           for (int i = rmv; i < size; i++) {
+            for (int i = rmv; i < size; i++) {
                 if (i == size-1)
-                   theData[i] = null;
+                    theData[i] = null;
                 else
-                   theData[i] = theData[i+1];
-           }
+                    theData[i] = theData[i+1];
+            }
         }
         return true;
     }
     public void ensureCapacity(int minCapacity) {
-        modCount++;
         if (minCapacity > capacity) {
-           int newCapacity = (capacity * 3)/2 +1;
-           if (newCapacity < minCapacity)
+            int newCapacity = (capacity * 3)/2 +1;
+            if (newCapacity < minCapacity)
                 newCapacity = minCapacity;
-           theData = Arrays.copyOf(theData, newCapacity);
-           capacity = newCapacity;
+            theData = Arrays.copyOf(theData, newCapacity);
+            capacity = newCapacity;
+            modCount++;
         }
     }
     public void trimToSize() {
-        modCount++;
         capacity = size;
         theData = Arrays.copyOf(theData, capacity);
-    }
-    public void addAll(int index, Collection<? extends E> c) {
         modCount++;
-        if (c == null)
-           break;
-        for (int i = index; i < c.size(); i++) {
-            this.add(i, c.get(i));
+    }
+    @Override
+    public boolean addAll(int index, Collection<? extends E> c) {
+        if (c == null || index < 0 || index > size)
+            return false;
+        for (E e: c) {
+            this.add(index, e);
+            index++;
         }
+        return true;
     }
 }
-
-
-
-
