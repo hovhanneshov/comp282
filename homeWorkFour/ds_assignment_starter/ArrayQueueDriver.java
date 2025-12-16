@@ -164,12 +164,12 @@ public class ArrayQueueDriver {
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.offer("hundreddollarbills.png");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.poll(); // Printing
-        printspoolingburst.poll();
-        printspoolingburst.poll();
-        printspoolingburst.poll();
-        printspoolingburst.poll();
-        printspoolingburst.poll();
+        System.out.println(printspoolingburst.poll() + " is printing"); // Printing
+        System.out.println(printspoolingburst.poll() + " is printing");
+        System.out.println(printspoolingburst.poll() + " is printing");
+        System.out.println(printspoolingburst.poll() + " is printing");
+        System.out.println(printspoolingburst.poll() + " is printing");
+        System.out.println(printspoolingburst.poll() + " is printing");
     }
 
     // Q9 – Round-Robin Service (Single Queue Version)
