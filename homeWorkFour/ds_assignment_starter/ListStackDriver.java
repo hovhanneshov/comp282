@@ -25,17 +25,17 @@ public class ListStackDriver {
         // TODO: Implement task S1 here.
         ListStack<String> urls = new ListStack<String>();
         urls.push("www.youtube.com");
-        urls.peek();
+        System.out.println(urls.peek() + " is the current link.");
         urls.push("www.google.com");
-        urls.peek();
+        System.out.println(urls.peek() + " is the current link.");
         urls.push("www.yahoo.com");
-        urls.peek();
+        System.out.println(urls.peek() + " is the current link.");
         urls.push("www.ebay.com");
-        urls.peek();
+        System.out.println(urls.peek() + " is the current link.");
         urls.pop(); // Back button
-        urls.peek();
+        System.out.println(urls.peek() + " is the current link.");
         urls.pop();
-        urls.peek();
+        System.out.println(urls.peek() + " is the current link.");
         // Every pop and push function is O(1);
     }
 
@@ -45,13 +45,13 @@ public class ListStackDriver {
         String s = "";
         ListStack<String> texteditorundo = new ListStack<String>();
         texteditorundo.push(s);
-        texteditorundo.peek();
+        System.out.println(texteditorundo.peek() + " text history.");
         s = "Line of text 2";
         texteditorundo.push(s);
-        texteditorundo.peek();
+        System.out.println(texteditorundo.peek() + " text history.");
         s = "Line of text 3";
         s = texteditorundo.pop(); // Undo
-        texteditorundo.peek();
+        System.out.println(texteditorundo.peek() + " text history.");
     }
 
     // S3 – Checking Balanced Parentheses
@@ -94,7 +94,7 @@ public class ListStackDriver {
             if(!arr[i].equals("cd .."))
                 directorynavigation.push(arr[i]);
             else
-                directorynavigation.pop();
+                System.out.println(directorynavigation.pop());
         }
     }
 
@@ -105,8 +105,10 @@ public class ListStackDriver {
         String[] arr = {"5+2=7", "3*2=6", "Ans+3=9"};
         for(int i = 0; i < arr.length(); i++) {
             calculatorhistory.push(arr[i]);
+            System.out.println(arr[i]);
         }
-        calculatorhistory.pop(); // Undoes last operation
+       calculatorhistory.pop(); // Undoes last operation
+        System.out.println(calculatorhistory.peek());
     }
 
     // S7 – Palindrome Checker
@@ -134,16 +136,16 @@ public class ListStackDriver {
     private static void runS8_FunctionCallStack() {
         // TODO: Implement task S8 here.
         ListStack<String> functioncallstack = new ListStack<>();
-        String[] arr = {"call first function", "call seond function", "return"};
+        String[] arr = {"call first function", "call second function", "return"};
         for(int i = 0; i < arr.length(); i++) {
             if(arr[i].substring(0, 4).equals("call")) {
                 functioncallstack.push(arr[i]);
-                functioncallstack.peek();
+                System.out.println(functioncallstack.peek());
             }
             else if(arr[i].equals("return")) {
                 functioncallstack.pop();
                 if(!functioncallstack.isEmpty())
-                    functioncallstack.peek();
+                    System.out.println(functioncallstack.peek());
             }
         }
     }
@@ -159,12 +161,12 @@ public class ListStackDriver {
                 System.out.println("The stack is full, please remove a plate before inserting another one.");
             else {
                 stackofplates.push(arr[i]);
-                stackofplates.peek();
+                System.out.println(stackofplates.peek());
             }
         }
-        stackofplates.peek();
+        System.out.println(stackofplates.peek());
         stackofplates.pop();
         stackofplates.push("plate 4");
-        stackofplates.peek();
+        System.out.println(stackofplates.peek());
     }
 }
