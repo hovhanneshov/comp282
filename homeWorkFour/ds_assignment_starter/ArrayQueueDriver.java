@@ -101,14 +101,14 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q5 here.
         ArrayQueue<String> taskschedulingqueue = new ArrayQueue<>();
         taskschedulingqueue.add("Execute function");
-        taskschedulingqueue.peek();
-        taskschedulingqueue.remove(); // Execution
+        System.out.println("Queuing up " + taskschedulingqueue.peek());
+        System.out.println("Performing task: " + taskschedulingqueue.remove()); // Execution
         taskschedulingqueue.add("Store file in memory");
-        taskschedulingqueue.peek();
-        taskschedulingqueue.remove();
+        System.out.println("Queuing up " + taskschedulingqueue.peek());
+        System.out.println("Performing task: " + taskschedulingqueue.remove());
         taskschedulingqueue.add("Copy final contents in other address");
-        taskschedulingqueue.peek();
-        taskschedulingqueue.remove();
+        System.out.println("Queuing up " + taskschedulingqueue.peek());
+        System.out.println("Performing task: " + taskschedulingqueue.remove());
     }
 
     // Q6 – Checkout Line at a Store
@@ -116,13 +116,13 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q6 here.
         ArrayQueue<String> checkoutline = new ArrayQueue<>();
         checkoutline.add("Torrence");
-        checkoutline.peek();
+        System.out.println(checkoutline.peek() + " is being queued for checkout.");
         checkoutline.add("Carol");
-        checkoutline.peek();
+        System.out.println(checkoutline.peek() + " is being queued for checkout.");
         System.out.println("Now serving " + checkoutline.remove());
-        checkoutline.peek();
+        System.out.println(checkoutline.peek() + " is being queued for checkout.");
         checkoutline.add("Matt");
-        checkoutline.peek();
+        System.out.println(checkoutline.peek() + " is being queued for checkout.");
         System.out.println("Now serving " + checkoutline.remove());
         System.out.println("Now serving " + checkoutline.remove());
     }
@@ -132,19 +132,19 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q7 here.
         ArrayQueue<String> messagequeuechatapp = new ArrayQueue<>();
         messagequeuechatapp.add("Hey");
-        messagequeuechatapp.peek();
+        System.out.println(messagequeuechatapp.peek() + " your message is sending...");
         messagequeuechatapp.add("How was your day?");
-        messagequeuechatapp.peek();
-        messagequeuechatapp.remove(); // Sending after a short while of the messages being entered
-        messagequeuechatapp.remove();
+        System.out.println(messagequeuechatapp.peek() + " your message is sending...");
+        System.out.println(messagequeuechatapp.remove()); // Sending after a short while of the messages being entered
+        System.out.println(messagequeuechatapp.remove());
         System.out.println("Message was sent on 11:23");
         messagequeuechatapp.add("Ok");
-        messagequeuechatapp.peek();
-        messagequeuechatapp.remove();
+        System.out.println(messagequeuechatapp.peek() + " your message is sending...");
+        System.out.println(messagequeuechatapp.remove());
         System.out.println("Message was sent on 11:21");
         messagequeuechatapp.add("Wow, ur dry");
-        messagequeuechatapp.peek();
-        messagequeuechatapp.remove();
+        System.out.println(messagequeuechatapp.peek() + " your message is sending...");
+        System.out.println(messagequeuechatapp.remove());
         System.out.println("Message was sent on 11:24");
     }
 
