@@ -25,11 +25,11 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q1 here.
         ArrayQueue<String> printqueue = new ArrayQueue<>();
         printqueue.add("hw.pdf");
-        printqueue.peek();
+        System.out.println(printqueue.peek() + " was added to the print job.");
         printqueue.add("Bill Estimate.doc");
-        printqueue.peek();
-        printqueue.remove(); // Prints the first document queued
-        printqueue.peek();
+        System.out.println(printqueue.peek() + " was added to the print job.");
+        System.out.println(printqueue.remove() + " was printed."); // Prints the first document queued
+        System.out.println(printqueue.peek() + " is up next.");
     }
 
     // Q2 – Call Center Queue
@@ -37,18 +37,15 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q2 here.
         ArrayQueue<String> callcenterqueue = new ArrayQueue<>();
         callcenterqueue.add("Torrence"); // Calling and put on hold
-        callcenterqueue.peek();
+        System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
         callcenterqueue.add("Carol");
-        System.out.println("New caller put off hold.");
-        callcenterqueue.remove();
-        callcenterqueue.peek();
+        System.out.println(callcenterqueue.remove() + "? Hi, how can we help you today?");
+        System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
         callcenterqueue.add("Matt");
-        callcenterqueue.peek();
-        System.out.println("New caller put off hold.");
-        callcenterqueue.remove();
-        callcenterqueue.peek();
-        System.out.println("New caller put off hold.");
-        callcenterqueue.remove();
+        System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
+        System.out.println(callcenterqueue.remove() + "? Hi, how can we help you today?");
+        System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
+        System.out.println(callcenterqueue.remove() + "? Hi, how can we help you today?");
         if(callcenterqueue.isEmpty())
             System.out.println("Queue is now empty");
     }
@@ -58,15 +55,15 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q3 here.
         ArrayQueue<String> themeparkrideline = new ArrayQueue<>();
         themeparkrideline.add("Torrence");
-        themeparkrideline.peek();
+        System.out.println(themeparkrideline.peek() + " is now waiting in line");
         themeparkrideline.add("Carol");
-        themeparkrideline.peek();
+        System.out.println(themeparkrideline.peek() + " is now waiting in line");
         themeparkrideline.add("Matt");
-        themeparkrideline.peek();
-        System.out.println("Ride is now ready to b boarded.");
-        themeparkrideline.remove();
-        themeparkrideline.remove();
-        themeparkrideline.remove();
+        System.out.println(themeparkrideline.peek() + " is now waiting in line");
+        System.out.println("Ride is now ready to be boarded.");
+        System.out.println(themeparkrideline.remove() + " is now boarding, have fun!");
+        System.out.println(themeparkrideline.remove() + " is now boarding, have fun!");
+        System.out.println(themeparkrideline.remove() + " is now boarding, have fun!");
         if(themeparkrideline.isEmpty())
             System.out.println("Queue is now empty");
     }
