@@ -72,21 +72,28 @@ public class ArrayQueueDriver {
     private static void runQ4_CustomerServiceTickets() {
         // TODO: Implement task Q4 here.
         ArrayQueue<Integer> customerservicetickets = new ArrayQueue<>();
+        int wait = 0;
         customerservicetickets.add(568); // Service ticket
-        customerservicetickets.peek();
+        System.out.println(customerservicetickets.peek() + " will be serviced shortly.");
+        wait++;
         customerservicetickets.add(569);
-        customerservicetickets.peek();
+        System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
+        wait++;
         System.out.println("568!");
         customerservicetickets.remove();
-        customerservicetickets.peek();
+        wait--;
+        System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
         customerservicetickets.add(570);
-        customerservicetickets.peek();
+        wait++;
+        System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
         System.out.println("569!");
         customerservicetickets.remove();
-        customerservicetickets.peek();
+        wait--;
+        System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
         System.out.println("570!");
         customerservicetickets.remove();
-        customerservicetickets.peek();
+        wait--;
+        System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +"turn(s).");
     }
 
     // Q5 – Task Scheduling Queue
