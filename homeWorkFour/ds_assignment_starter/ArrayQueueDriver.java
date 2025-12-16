@@ -24,11 +24,11 @@ public class ArrayQueueDriver {
     private static void runQ1_PrintQueue() {
         // TODO: Implement task Q1 here.
         ArrayQueue<String> printqueue = new ArrayQueue<>();
-        printqueue.add("hw.pdf");
+        printqueue.offer("hw.pdf");
         System.out.println(printqueue.peek() + " was added to the print job.");
-        printqueue.add("Bill Estimate.doc");
+        printqueue.offer("Bill Estimate.doc");
         System.out.println(printqueue.peek() + " was added to the print job.");
-        System.out.println(printqueue.remove() + " was printed."); // Prints the first document queued
+        System.out.println(printqueue.poll() + " was printed."); // Prints the first document queued
         System.out.println(printqueue.peek() + " is up next.");
     }
 
@@ -36,16 +36,16 @@ public class ArrayQueueDriver {
     private static void runQ2_CallCenterQueue() {
         // TODO: Implement task Q2 here.
         ArrayQueue<String> callcenterqueue = new ArrayQueue<>();
-        callcenterqueue.add("Torrence"); // Calling and put on hold
+        callcenterqueue.offer("Torrence"); // Calling and put on hold
         System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
-        callcenterqueue.add("Carol");
-        System.out.println(callcenterqueue.remove() + "? Hi, how can we help you today?");
+        callcenterqueue.offer("Carol");
+        System.out.println(callcenterqueue.poll() + "? Hi, how can we help you today?");
         System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
-        callcenterqueue.add("Matt");
+        callcenterqueue.offer("Matt");
         System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
-        System.out.println(callcenterqueue.remove() + "? Hi, how can we help you today?");
+        System.out.println(callcenterqueue.poll() + "? Hi, how can we help you today?");
         System.out.println(callcenterqueue.peek() + ", you are on hold. Please wait.");
-        System.out.println(callcenterqueue.remove() + "? Hi, how can we help you today?");
+        System.out.println(callcenterqueue.poll() + "? Hi, how can we help you today?");
         if(callcenterqueue.isEmpty())
             System.out.println("Queue is now empty");
     }
@@ -54,16 +54,16 @@ public class ArrayQueueDriver {
     private static void runQ3_ThemeParkRideLine() {
         // TODO: Implement task Q3 here.
         ArrayQueue<String> themeparkrideline = new ArrayQueue<>();
-        themeparkrideline.add("Torrence");
+        themeparkrideline.offer("Torrence");
         System.out.println(themeparkrideline.peek() + " is now waiting in line");
-        themeparkrideline.add("Carol");
+        themeparkrideline.offer("Carol");
         System.out.println(themeparkrideline.peek() + " is now waiting in line");
-        themeparkrideline.add("Matt");
+        themeparkrideline.offer("Matt");
         System.out.println(themeparkrideline.peek() + " is now waiting in line");
         System.out.println("Ride is now ready to be boarded.");
-        System.out.println(themeparkrideline.remove() + " is now boarding, have fun!");
-        System.out.println(themeparkrideline.remove() + " is now boarding, have fun!");
-        System.out.println(themeparkrideline.remove() + " is now boarding, have fun!");
+        System.out.println(themeparkrideline.poll() + " is now boarding, have fun!");
+        System.out.println(themeparkrideline.poll() + " is now boarding, have fun!");
+        System.out.println(themeparkrideline.poll() + " is now boarding, have fun!");
         if(themeparkrideline.isEmpty())
             System.out.println("Queue is now empty");
     }
@@ -73,25 +73,25 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q4 here.
         ArrayQueue<Integer> customerservicetickets = new ArrayQueue<>();
         int wait = 0;
-        customerservicetickets.add(568); // Service ticket
+        customerservicetickets.offer(568); // Service ticket
         System.out.println(customerservicetickets.peek() + " will be serviced shortly.");
         wait++;
-        customerservicetickets.add(569);
+        customerservicetickets.offer(569);
         System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
         wait++;
         System.out.println("568!");
-        customerservicetickets.remove();
+        customerservicetickets.poll();
         wait--;
         System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
-        customerservicetickets.add(570);
+        customerservicetickets.offer(570);
         wait++;
         System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
         System.out.println("569!");
-        customerservicetickets.remove();
+        customerservicetickets.poll();
         wait--;
         System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +" turn(s).");
         System.out.println("570!");
-        customerservicetickets.remove();
+        customerservicetickets.poll();
         wait--;
         System.out.println(customerservicetickets.peek() + " will be serviced in " + wait +"turn(s).");
     }
@@ -100,51 +100,51 @@ public class ArrayQueueDriver {
     private static void runQ5_TaskSchedulingQueue() {
         // TODO: Implement task Q5 here.
         ArrayQueue<String> taskschedulingqueue = new ArrayQueue<>();
-        taskschedulingqueue.add("Execute function");
+        taskschedulingqueue.offer("Execute function");
         System.out.println("Queuing up " + taskschedulingqueue.peek());
-        System.out.println("Performing task: " + taskschedulingqueue.remove()); // Execution
-        taskschedulingqueue.add("Store file in memory");
+        System.out.println("Performing task: " + taskschedulingqueue.poll()); // Execution
+        taskschedulingqueue.offer("Store file in memory");
         System.out.println("Queuing up " + taskschedulingqueue.peek());
-        System.out.println("Performing task: " + taskschedulingqueue.remove());
-        taskschedulingqueue.add("Copy final contents in other address");
+        System.out.println("Performing task: " + taskschedulingqueue.poll());
+        taskschedulingqueue.offer("Copy final contents in other address");
         System.out.println("Queuing up " + taskschedulingqueue.peek());
-        System.out.println("Performing task: " + taskschedulingqueue.remove());
+        System.out.println("Performing task: " + taskschedulingqueue.poll());
     }
 
     // Q6 – Checkout Line at a Store
     private static void runQ6_CheckoutLine() {
         // TODO: Implement task Q6 here.
         ArrayQueue<String> checkoutline = new ArrayQueue<>();
-        checkoutline.add("Torrence");
+        checkoutline.offer("Torrence");
         System.out.println(checkoutline.peek() + " is being queued for checkout.");
-        checkoutline.add("Carol");
+        checkoutline.offer("Carol");
         System.out.println(checkoutline.peek() + " is being queued for checkout.");
-        System.out.println("Now serving " + checkoutline.remove());
+        System.out.println("Now serving " + checkoutline.poll());
         System.out.println(checkoutline.peek() + " is being queued for checkout.");
-        checkoutline.add("Matt");
+        checkoutline.offer("Matt");
         System.out.println(checkoutline.peek() + " is being queued for checkout.");
-        System.out.println("Now serving " + checkoutline.remove());
-        System.out.println("Now serving " + checkoutline.remove());
+        System.out.println("Now serving " + checkoutline.poll());
+        System.out.println("Now serving " + checkoutline.poll());
     }
 
     // Q7 – Message Queue in a Chat App
     private static void runQ7_MessageQueueChatApp() {
         // TODO: Implement task Q7 here.
         ArrayQueue<String> messagequeuechatapp = new ArrayQueue<>();
-        messagequeuechatapp.add("Hey");
+        messagequeuechatapp.offer("Hey");
         System.out.println(messagequeuechatapp.peek() + " your message is sending...");
-        messagequeuechatapp.add("How was your day?");
+        messagequeuechatapp.offer("How was your day?");
         System.out.println(messagequeuechatapp.peek() + " your message is sending...");
-        System.out.println(messagequeuechatapp.remove()); // Sending after a short while of the messages being entered
-        System.out.println(messagequeuechatapp.remove());
+        System.out.println(messagequeuechatapp.poll()); // Sending after a short while of the messages being entered
+        System.out.println(messagequeuechatapp.poll());
         System.out.println("Message was sent on 11:23");
-        messagequeuechatapp.add("Ok");
+        messagequeuechatapp.offer("Ok");
         System.out.println(messagequeuechatapp.peek() + " your message is sending...");
-        System.out.println(messagequeuechatapp.remove());
+        System.out.println(messagequeuechatapp.poll());
         System.out.println("Message was sent on 11:21");
-        messagequeuechatapp.add("Wow, ur dry");
+        messagequeuechatapp.offer("Wow, ur dry");
         System.out.println(messagequeuechatapp.peek() + " your message is sending...");
-        System.out.println(messagequeuechatapp.remove());
+        System.out.println(messagequeuechatapp.poll());
         System.out.println("Message was sent on 11:24");
     }
 
@@ -152,24 +152,24 @@ public class ArrayQueueDriver {
     private static void runQ8_PrintSpoolingBurst() {
         // TODO: Implement task Q8 here.
         ArrayQueue<String> printspoolingburst = new ArrayQueue<>();
-        printspoolingburst.add("hw.pdf");
+        printspoolingburst.offer("hw.pdf");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.add("Bill Estimate.doc");
+        printspoolingburst.offer("Bill Estimate.doc");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.add("Bill Estimate_1.doc");
+        printspoolingburst.offer("Bill Estimate_1.doc");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.add("Bill Estimate_2.doc");
+        printspoolingburst.offer("Bill Estimate_2.doc");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
+        printspoolingburst.offer("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.add("hundreddollarbills.png");
+        printspoolingburst.offer("hundreddollarbills.png");
         System.out.println(printspoolingburst.peek() + " is being queued for printing.");
-        printspoolingburst.remove(); // Printing
-        printspoolingburst.remove();
-        printspoolingburst.remove();
-        printspoolingburst.remove();
-        printspoolingburst.remove();
-        printspoolingburst.remove();
+        printspoolingburst.poll(); // Printing
+        printspoolingburst.poll();
+        printspoolingburst.poll();
+        printspoolingburst.poll();
+        printspoolingburst.poll();
+        printspoolingburst.poll();
     }
 
     // Q9 – Round-Robin Service (Single Queue Version)
@@ -179,13 +179,13 @@ public class ArrayQueueDriver {
         int rounds = 8;
         String[] arr = {"Torrence", "Caroll", "Matt", "Paul"};
         for(int i = 0; i < arr.length(); i++) { // Setting up queue
-            roundrobinservice.add(arr[i]);
+            roundrobinservice.offer(arr[i]);
         }
         for(int i = 1; i <= rounds; i++) { // roundrobinservice method
-            String person = roundrobinservice.remove();
+            String person = roundrobinservice.poll();
             System.out.println("Round " + i + ": Serving " + person);
             if(i % 2 == 1) {
-                roundrobinservice.add(person);
+                roundrobinservice.offer(person);
                 System.out.println(person + " requeued for more service.");
             }
             else
