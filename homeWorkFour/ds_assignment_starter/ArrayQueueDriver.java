@@ -153,27 +153,22 @@ public class ArrayQueueDriver {
         // TODO: Implement task Q8 here.
         ArrayQueue<String> printspoolingburst = new ArrayQueue<>();
         printspoolingburst.add("hw.pdf");
-        printspoolingburst.peek();
+        System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.add("Bill Estimate.doc");
-        printspoolingburst.peek();
+        System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.add("Bill Estimate_1.doc");
-        printspoolingburst.peek();
+        System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.add("Bill Estimate_2.doc");
-        printspoolingburst.peek();
+        System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.add("Stewart Calculus Textbook FREE DOWNLOAD libgen.pdf");
-        printspoolingburst.peek();
+        System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.add("hundreddollarbills.png");
-        printspoolingburst.peek();
+        System.out.println(printspoolingburst.peek() + " is being queued for printing.");
         printspoolingburst.remove(); // Printing
-        printspoolingburst.peek();
         printspoolingburst.remove();
-        printspoolingburst.peek();
         printspoolingburst.remove();
-        printspoolingburst.peek();
         printspoolingburst.remove();
-        printspoolingburst.peek();
         printspoolingburst.remove();
-        printspoolingburst.peek();
         printspoolingburst.remove();
     }
 
